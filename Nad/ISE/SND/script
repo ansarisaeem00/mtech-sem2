@@ -1,0 +1,36 @@
+Paper-1:
+
+Abstract
+Cloud computing is required by modern technology. Task scheduling and resource allocation are important
+aspects of cloud computing. This paper proposes a heuristic approach that combines the modified analytic
+hierarchy process (MAHP), bandwidth aware divisible scheduling (BATS) + BAR optimization, longest expected
+processing time preemption (LEPT), and divide-and-conquer methods to perform task scheduling and resource
+allocation. In this approach, each task is processed before its actual allocation to cloud resources using a
+MAHP process. The resources are allocated using the combined BATS + BAR optimization method, which
+considers the bandwidth and load of the cloud resources as constraints. In addition, the proposed system
+preempts resource intensive tasks using LEPT preemption. The divide-and-conquer approach improves the
+proposed system, as is proven experimentally through comparison with the existing BATS and improved
+differential evolution algorithm (IDEA) frameworks when turnaround time and response time are used as
+performance metrics.
+
+
+Introduction
+Cloud computing is an accelerating technology in the field of distributed computing. Cloud computing can be used in applications that include storing data, data analytics and IoT applications [1]. Cloud computing is a technology that has changed traditional ways in which services are deployed by enterprises or individuals. It provides different types of services to registered users as web services so that the users do not need to invest in computing infrastructure. Cloud computing provides services such as IaaS (Infrastructure as a Service), PaaS (Platform as a Service), and SaaS (Software as a Service) [2]. In each type of service, the users are expected to submit the requests to the service provider through the medium of the Internet.
+
+
+Input data
+Cybershake scientific workflow Cloud computing is the service provider paradigm in which users submit requests for execution. Thus, the responsibility of the cloud service provider is to schedule various requests and manage resources efficiently. To the best of the authors’ knowledge, most existing work involves scheduling tasks once they enter a task queue. However, the actual procedure of scheduling tasks and resource management begins with how the service provider addresses incoming tasks. The proposed system uses Cybershake scientific workflow data as input tasks [21]. Fig. 1 shows a visualization of the Cybershake scientific workflow, which is used by the Southern California Earthquake Center (SCEC) to characterize earthquake hazards using the Probabilistic Seismic Hazard Analysis (PSHA) technique.
+
+
+Proposed system
+In practice, various types and sizes of tasks arrive at the cloud data centers for execution. The proposed system takes the real tasks as an input, scientific tasks represent collections of different types and sizes. To manage the tasks that come into a cloud data center, the proposed system uses the analytic hierarchy process (AHP). The primary aim of this proposed system is to manage incoming tasks. Therefore, the proposed system uses the AHP methodology to assign a rank to each task based on its length and run time.As soon as the tasks are assigned individual rankings, they are collected and arranged into task queues. The tasks in the task queue are strictly arranged following the AHP ranking. Thus, the first stage of the proposed system is completed. Next, in the second stage, the proposed system also addresses the computing resources of cloud data centers, such as CPU, memory and bandwidthusing the proposed BATS+BAR optimized allocation methodology. This methodology works as follows. It takes the task to be executed from the task’ queue. The assignment of resources and tasks follows the allocation Eq. 4. A detailed explanation is given in section 5.2.This stage is the second part of the procedure in which the allocations of resources have been carried out using BATS+BAR. In the next part, the proposed system uses a preemption methodology, i.e., the preemption method. LEPT continuously checks the load of the virtual machine. If it is exceeded the proposed system then uses a virtual machine status table to determine the current status of other virtual machines (VMs). In this regard, if the current virtual machine is overloaded and others are idle, then such VMs are located. After this identification, the proposed system uses a divide and conquer methodology, which breaks up the task and distributes it to other virtual machines, as described in detail in section 5.3.
+
+
+Paper-2:
+
+Resource allocation prediction experiment.After obtaining the optimal prediction models for the two algorithms, we randomly generated four test sets that included 1000, 2000, 3000, or 5000 user requirements and the corresponding bid values and used CPLEX to determine the optimal allocation solution (OPT_ALLOC) for all test sets, which was used to compare the Linear-ALLOC and Logistic-ALLOC algorithms of this paper. We also used the heuristic algorithm GVMPAC-II-ALLOC proposed in the literature [Nejad, Mashayekhy and Grosu (2015)] for comparison. From Fig. 2, we can see that in solving social welfare, the Linear-ALLOC and Logistic-ALLOC algorithms are better than the existing algorithm G-VMPAC-II-ALLOC. It is proved that the optimal allocation solution has a potential model that can be fitted by a machine learning algorithm. The social welfare derived from the Linear-ALLOC algorithm is very close to the optimal allocation solution.
+Fig. 3 shows the prediction accuracy. It can be seen that the prediction accuracy of G-VMPAC-II-ALLOC based on the greedy method is lower than 90%, which means that more than 10% of users should be allocated resources but are not. The prediction allocation algorithms based on machine learning has very high accuracies, all over 95%. Among them, the prediction accuracy of the Linear-ALLOC algorithm is more than 98%.The accuracy rate can reflect the fairness of the algorithm, which is a very important indicator in resource allocation.
+
+Conclusion :
+It is an innovative idea to transform the multi-dimensional cloud computing resource allocation problem into a regression or classification machine learning problem. By learning the training data, the algorithm can make the feasible solution very close to the optimal solution in terms of social welfare allocation accuracy and resource utilization. It is verified that there is indeed a potential model in optimal resource allocation that presents a new solution for multi-dimensional cloud computing resource allocation. In this paper, we did not discuss whether the resource allocation algorithm based on machine learning satisfies the strategy proof of the auction mechanism. This is one of our
+major tasks for future research.
