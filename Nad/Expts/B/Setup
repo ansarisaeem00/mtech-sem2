@@ -1,0 +1,11 @@
+#For installation of Ns2 and NAM.
+Run the script file by-
+sudo sh inscript.sh
+
+
+#To un the simulator
+1.Traverse to the folder.
+2.Enter the command 
+ns filename.tcl
+
+ex:- ns ex1.tcl (to run the first simulator and so on..)
